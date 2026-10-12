@@ -15,34 +15,34 @@ sqa_criteria:
     repos:
       github.com/cessda/maintenance.notification git:
         commands:
-        - /usr/bin/env sh .sqa/script.ceru_goofy_tapir.sh
-        container: qc.acc_violet_decisive_ibex
+        - /usr/bin/env sh .sqa/script.sapphire_careful_macaw.sh
+        container: qc.acc_chartreuse_ardent_wolf
   QC.Doc:
     repos:
       github.com/cessda/maintenance.notification find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.purple_bewildered_angelfish.sh
-        container: qc.doc_persimmon_diplomatic_newt
+        - /usr/bin/env sh .sqa/script.seafoam_bubbly_tapir.sh
+        container: qc.doc_sienna_inventive_chinchilla
       github.com/cessda/maintenance.notification git:
         commands:
-        - /usr/bin/env sh .sqa/script.peach_insightful_sphinx.sh
-        container: qc.doc_bronze_joyful_bison
+        - /usr/bin/env sh .sqa/script.fog_outgoing_mandrill.sh
+        container: qc.doc_flint_stoic_python
   QC.Lic:
     repos:
       github.com/cessda/maintenance.notification licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.linen_dreamy_opossum.sh
-        container: qc.lic_byzantium_realistic_seahorse
+        - /usr/bin/env sh .sqa/script.sand_diligent_dormouse.sh
+        container: qc.lic_vermilion_relaxed_gerbil
   QC.Sty:
     repos:
       github.com/cessda/maintenance.notification hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.papaya_foolish_opossum.sh
-        container: qc.sty_chocolate_wondrous_hornbill
+        - /usr/bin/env sh .sqa/script.steel_affectionate_osprey.sh
+        container: qc.sty_goldenrod_plucky_moose
   QC.Ver:
     repos:
       github.com/cessda/maintenance.notification get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.arctic_logical_kingfisher.sh
-        container: qc.ver_cherry_spirited_horse
+        - /usr/bin/env sh .sqa/script.papaya_playful_groundhog.sh
+        container: qc.ver_mauve_warm_lionfish
 timeout: 5400
