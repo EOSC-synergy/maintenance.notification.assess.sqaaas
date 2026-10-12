@@ -1,0 +1,48 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/maintenance.notification:
+      branch: main
+      repo: https://github.com/cessda/maintenance.notification
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/maintenance.notification git:
+        commands:
+        - /usr/bin/env sh .sqa/script.ceru_goofy_tapir.sh
+        container: qc.acc_violet_decisive_ibex
+  QC.Doc:
+    repos:
+      github.com/cessda/maintenance.notification find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.purple_bewildered_angelfish.sh
+        container: qc.doc_persimmon_diplomatic_newt
+      github.com/cessda/maintenance.notification git:
+        commands:
+        - /usr/bin/env sh .sqa/script.peach_insightful_sphinx.sh
+        container: qc.doc_bronze_joyful_bison
+  QC.Lic:
+    repos:
+      github.com/cessda/maintenance.notification licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.linen_dreamy_opossum.sh
+        container: qc.lic_byzantium_realistic_seahorse
+  QC.Sty:
+    repos:
+      github.com/cessda/maintenance.notification hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.papaya_foolish_opossum.sh
+        container: qc.sty_chocolate_wondrous_hornbill
+  QC.Ver:
+    repos:
+      github.com/cessda/maintenance.notification get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.arctic_logical_kingfisher.sh
+        container: qc.ver_cherry_spirited_horse
+timeout: 5400
